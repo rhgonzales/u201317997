@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://java.sun.com/jsf/composite"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <cc:interface>
+        <cc:attribute name="pagoo" />
+    </cc:interface>
+
+    <cc:implementation>
+        <p:panel>
+
+            <h:panelGrid columns="2" style="padding-left:50px;">
+           
+                <span class="label">Que se paga:</span>			<h:outputText value="#{cc.attrs.pagoo.descripcion}"/>
+                <span class="label">Nro RUC:</span>			<h:outputText value="#{cc.attrs.pagoo.ruc}"/>
+                <span class="label">Periodo Tributario:</span>	<h:outputText value="#{cc.attrs.pagoo.periodoTributario}"/>
+                <span class="label">Resolucion:</span> 		<h:outputText value="#{cc.attrs.pagoo.resolucion}"/>
+                <span class="label">Codigo Tributario:</span>	<h:outputText value="#{cc.attrs.pagoo.codigoTributario}"/>
+                <span class="label">Importe a Pagar:</span>	<h:outputText value="#{cc.attrs.pagoo.importe}"/>
+            </h:panelGrid>
+        </p:panel>
+    </cc:implementation>
+</html>
